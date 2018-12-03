@@ -43,7 +43,7 @@
   <!-- initialize keyboard (required) -->
   <script>
     $(function(){
-      $('input:not([type="radio"]').keyboard({
+      $('input[type="text"], input[type="email"]').keyboard({
         layout: 'custom',
         customLayout: {
           'normal': [
@@ -94,31 +94,31 @@
               <div class="personal-info">
                 <p>Which of the following social media websites do you actively use for networking and industry news? (Please select all that apply)</p>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="demo" id="demo" value="LinkedIn">
+                  <input class="form-check-input" type="checkbox" name="LinkedIn" id="LinkedIn" value="LinkedIn">
                   <label class="form-check-label">
                   LinkedIn
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="demo" id="demo1" value="Twitter">
+                  <input class="form-check-input" type="checkbox" name="Twitter" id="Twitter" value="Twitter">
                   <label class="form-check-label">
                   Twitter 
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="demo" id="demo1" value="Facebook">
+                  <input class="form-check-input" type="checkbox" name="Facebook" id="Facebook" value="Facebook">
                   <label class="form-check-label">
                   Facebook  
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="demo" id="demo1" value="Instagram">
+                  <input class="form-check-input" type="checkbox" name="Instagram" id="Instagram" value="Instagram">
                   <label class="form-check-label">
                   Instagram 
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="demo" id="demo1" value="Other">
+                  <input class="form-check-input" type="checkbox" name="other" id="other" value="Other">
                   <label class="form-check-label">
                   Other (please specify) :<input class="form-text" type="text" name="other-text" id="other-text">  
                   </label>
@@ -228,14 +228,15 @@
 </div>
 <div id="dialog-overlay1"></div>
 <div id="dialog-box1">
-  <a href="#" class="button close">Close</a>
+  <a href="#" class="button ok">Close</a>
   <div class="dialog-content1">
     <div id="dialog-message1">
       <div class="form-mid-w3ls">
-        <p>Enter your email for a chance to win  an Amazon gift card.</p>
+        <p>Enter your email for a chance to win  an $100 Amazon gift card.</p>
         <input type="email" class="form-control" name="email" id="email" required="">
       </div>
       <div class="form-mid-w3ls">
+        <br>
         <button type="submit" id="form-submit1" class="btn1" required="" value="SUBMIT" name="">SUBMIT</button>
       </div>
     </div>

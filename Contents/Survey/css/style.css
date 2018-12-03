@@ -48,7 +48,8 @@ font-size: 25px;
 color: #000;
 padding-bottom: 15px;
 }
-.personal-info p,.form-control-w3l p,.form-mid-w3ls p {font-weight:500;}
+.personal-info p,.form-control-w3l p,.form-mid-w3ls p {font-weight:500; }
+.personal-info p{    width: 910px;}
 .form-check {
 display: block;
 }
@@ -140,7 +141,7 @@ background: #000;
   border: none;
   font-size: 25px;
 }
-input[type=radio] {
+input[type=radio] ,input[type=checkbox]{
 width: 40px;
 height: 35px;
 position: absolute;

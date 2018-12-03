@@ -48,7 +48,7 @@ $(document).ready(function(){
       $('#dialog-overlay, #dialog-box').hide();   
       return false;
     });
-   $('.close').click(function () {   
+   $('.ok').click(function () {   
       $('#dialog-overlay1, #dialog-box1').hide();   
       return false;
     });
@@ -105,7 +105,7 @@ $(document).ready(function(){
       return false;
     }*/
 
-    var radioValue = $('input:radio[name=demo]:checked').val();
+    /*var radioValue = $('input:radio[name=demo]:checked').val();
     //alert(radioValue);
     if (radioValue==null) {
       alert("Please Select an option.");
@@ -117,7 +117,7 @@ $(document).ready(function(){
       $("#other-text").focus();
       return false;
     }
-    
+*/
     var radioValue2 = $('input:radio[name=visit]:checked').val();
     //alert(radioValue);
     if (radioValue2==null) {
@@ -184,7 +184,7 @@ $(document).ready(function(){
     //e.preventDefault();
 
             var $action = $('#contactForm').prop('action');
-            var $data = $('#contactForm').serialize();
+            var $data = $('#contactForm').serialize() + '&email=' + $("#email").val();
             var $this = $('#contactForm');
 
             $this.prevAll('.alert').remove();

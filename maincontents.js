@@ -1,9 +1,9 @@
 ﻿var speak = new Array( );
 
 
-        speak[0] = "check out the guestforce experience";
+        speak[0] = "Take a quick survey for a chance to win a $100 Amazon gift card";
         speak[1] = "By completing this survey and signing up with GuestForce at this show you qualify for a lifetime 5% bonus on the RevShare Program!";
-        speak[2] = "spin the wheel for your chance to win great prizes";
+        speak[2] = "point Your smartphones at the Qr code and press your photo button to connect on LinkedIn";
         speak[3] = "Read a welcome message from our dean.";
         speak[4] = "Find out what classes you need for your major.";
         speak[5] = "";
@@ -26,7 +26,7 @@ function FC_ContentsCall(strContentsName, strLanguage)
            location.href = "../../maincontents.htm";
             break;
         case "Survey":
-            //PlaySpeech(speak[0]);
+            PlaySpeech(speak[0]);
             location.href = "Contents/Survey/index.html";
             break;
         case "SmartER":
@@ -34,20 +34,20 @@ function FC_ContentsCall(strContentsName, strLanguage)
             location.href = "Contents/SmartER/index.html";
             break;
         case "Linkden":
-            //PlaySpeech(speak[2]);
+            PlaySpeech(speak[2]);
             location.href = "Contents/Linkden/index.html";
             break;
         
         case "Selfie":
-            //PlaySpeech(speak[6]);
+            PlaySpeech(speak[6]);
             location.href = "Contents/Selfie/index.html";
             break;
         case "Avatar":
-            //PlaySpeech(speak[7]);
+            PlaySpeech(speak[7]);
             location.href = "Contents/RobotAvatar/index.htm";
             break;
         case "Dance":
-            //PlaySpeech(speak[8]);
+            PlaySpeech(speak[8]);
             location.href = "Contents/Dance/index.html";
             break;
         case "Config":
@@ -201,7 +201,7 @@ function OnJoystickControlled(strPara){
     if(btn_info[1] == '1'){
         window.external.ChangeLanguage("en-us");
         SetVolume(1);
-        window.external.PlaySpeech("Checkout GuestForce, the whatever, whenever, wherever Experiential Technology!");   
+        window.external.PlaySpeech("Hello, (Japanese ‘hello’) welcome to MHPS.  Touch a button on my screen to begin.");   
     }
     if(btn_info[2] == '1'){
         window.external.ChangeLanguage("en-us");
@@ -214,8 +214,8 @@ function OnJoystickControlled(strPara){
         window.external.PlaySpeech("Hey, want to dance with me?");        
     }
     if(btn_info[4] == '1'){
-        SetVolume(1);
-        window.external.PlaySpeech("Vote for GuestForce at the Battleground Monday morning");
+        //SetVolume(1);
+        //window.external.PlaySpeech("");
         
         //SetHeadYaw(35, 23);       
     }
