@@ -4,7 +4,7 @@ html{height: 1600px;}
 #container #contents {position: relative; height: 1180px;}
 #container #contents .photo_btn {position: absolute; display: block; float: left; margin-top: -14px;margin-left: 232px;}
 #container #contents .photo_btn  li {float: left;}
-#container #contents .photo_frame {position: absolute; float: left; margin-left: 73px; margin-top: 189px;}
+#container #contents .photo_frame {position: absolute; float: left; margin-left: 73px; margin-top: 155px;}
 #container #contents .photo_frame dd {float:left; margin-right: 39px;}
 
 ul{list-style-type: none;}
@@ -25,7 +25,7 @@ body {
 .home{
 	float: left;
 	height: 57px;
-	padding-right: 30px;
+	padding-right: 10px;
 
 }
 canvas  {

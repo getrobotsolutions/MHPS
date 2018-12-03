@@ -25,13 +25,17 @@ function FC_ContentsCall(strContentsName, strLanguage)
         case "Home":
            location.href = "../../maincontents.htm";
             break;
-        case "Demo":
-            PlaySpeech(speak[0]);
-            location.href = "Contents/Demo/index.html";
-            break;
         case "Survey":
-            //PlaySpeech(speak[1]);
+            //PlaySpeech(speak[0]);
             location.href = "Contents/Survey/index.html";
+            break;
+        case "SmartER":
+            //PlaySpeech(speak[1]);
+            location.href = "Contents/SmartER/index.html";
+            break;
+        case "Linkden":
+            //PlaySpeech(speak[2]);
+            location.href = "Contents/Linkden/index.html";
             break;
         
         case "Selfie":
@@ -50,7 +54,7 @@ function FC_ContentsCall(strContentsName, strLanguage)
             location.href = "Config/Config.htm";
             break;
         case "maincontents":
-            location.href = "main.htm";
+            location.href = "maincontents.htm";
             break;
         default:
             break;

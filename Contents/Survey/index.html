@@ -62,7 +62,7 @@
           ]
         }
       })
-      .addTyping();
+     ;
     });
   </script>
 
@@ -89,38 +89,38 @@
           </div>
       <!-- multistep form -->
       <div class="main-bothside">
-        <form action="http://robotaisolutions.com/robot-work/guestforce-survey-form-data.php" method="post" id="contactForm">
+        <form action="http://robotaisolutions.com/robot-work/mitsubishi-survey-form-data.php" method="post" id="contactForm">
             <div class="form-group">
               <div class="personal-info">
                 <p>Which of the following social media websites do you actively use for networking and industry news? (Please select all that apply)</p>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="demo" id="demo" value="yes">
+                  <input class="form-check-input" type="radio" name="demo" id="demo" value="LinkedIn">
                   <label class="form-check-label">
                   LinkedIn
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="demo" id="demo1" value="no">
+                  <input class="form-check-input" type="radio" name="demo" id="demo1" value="Twitter">
                   <label class="form-check-label">
                   Twitter 
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="demo" id="demo1" value="no">
+                  <input class="form-check-input" type="radio" name="demo" id="demo1" value="Facebook">
                   <label class="form-check-label">
                   Facebook  
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="demo" id="demo1" value="no">
+                  <input class="form-check-input" type="radio" name="demo" id="demo1" value="Instagram">
                   <label class="form-check-label">
                   Instagram 
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="demo" id="demo1" value="no">
+                  <input class="form-check-input" type="radio" name="demo" id="demo1" value="Other">
                   <label class="form-check-label">
-                  Other (please specify) :<input class="form-text" type="text" name="other" id="other" value="">  
+                  Other (please specify) :<input class="form-text" type="text" name="other-text" id="other-text">  
                   </label>
                 </div>
               </div>
@@ -129,31 +129,31 @@
               <div class="personal-info">
                 <p>During the past year, how many times would you say you have visited an MHPS Americas website changeinpower.com or amer.mhps.com?</p>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="demo" id="demo" value="yes">
+                    <input class="form-check-input" type="radio" name="visit" id="demo" value="1-2">
                     <label class="form-check-label">
                     1-2 times
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="demo" id="demo1" value="no">
+                    <input class="form-check-input" type="radio" name="visit" id="demo1" value="3-6">
                     <label class="form-check-label">
                     3-6 times  
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="demo" id="demo1" value="no">
+                    <input class="form-check-input" type="radio" name="visit" id="demo1" value="7-12">
                     <label class="form-check-label">
                     7-12 times  
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="demo" id="demo1" value="no">
+                    <input class="form-check-input" type="radio" name="visit" id="demo1" value="More than 12">
                     <label class="form-check-label">
                     More than 12 times  
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="demo" id="demo1" value="no">
+                    <input class="form-check-input" type="radio" name="visit" id="demo1" value="None">
                     <label class="form-check-label">
                     None  
                     </label>
@@ -163,18 +163,17 @@
               <div class="form-group">
                 <div class="form-mid-w3ls">
                   <p>What word(s) first come to mind when you think of MHPS?</p>
-                  <input type="text" class="form-control" name="name" id="name" required="" placeholder="Type in Response">
+                  <input type="text" class="form-control" name="mphs" id="mphs" required="" placeholder="Type in Response">
                 </div>
-                <!--<div class="form-mid-w3ls">
-                  <p>Email Address</p>
-                  <input type="email" class="form-control" name="email" id="email" required="">
-                </div>-->
+                
               </div>
             
-            
-              <button type="submit" id="form-submit" class="btn1" required="required" value="SUBMIT" name="submit">SUBMIT</button>
+              <div class="form-mid-w3ls">
+                  
+              </div>
 
           </form>
+          <button type="" id="form-submit" class="btn1" required="" value="SUBMIT" name="">SUBMIT</button>
          <div id="form-success">Thank You for taking part in Survey</div>
       </div>
     </div>
@@ -222,12 +221,27 @@
         </div>   
     </div>
 
-    <img src="../../assets/bottom-line.png" onclick="ShowPopupARS('images/contact.png')">
+    <img src="../../assets/bottom-line.png" onclick="ShowPopupARS('../../images/contact.png')">
 </footer>
 <div id="dialog-overlay"></div>
 <div id="dialog-box">
 </div>
-
+<div id="dialog-overlay1"></div>
+<div id="dialog-box1">
+  <a href="#" class="button close">Close</a>
+  <div class="dialog-content1">
+    <div id="dialog-message1">
+      <div class="form-mid-w3ls">
+        <p>Enter your email for a chance to win  an Amazon gift card.</p>
+        <input type="email" class="form-control" name="email" id="email" required="">
+      </div>
+      <div class="form-mid-w3ls">
+        <button type="submit" id="form-submit1" class="btn1" required="" value="SUBMIT" name="">SUBMIT</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
 </body>
 <script type="application/javascript">
     if(readCookie("CurrentLanguage") === "English")

@@ -277,14 +277,15 @@ a.button {
 	float: right;
 }
 .title{
-	background-color: #000000;
+	/*background-color: #000000;*/
 	height: 90px;
     font-size: 60px;
     line-height: 85px;
-    width: 80%;
+    width: 82%;
     margin: auto;
     text-align: center;
     margin-top: 60px;
+    color: black;
 }
 iframe{border: none;}
 

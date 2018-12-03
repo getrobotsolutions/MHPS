@@ -133,6 +133,13 @@ background: #000;
   border: none;
   font-size: 25px;
 }
+#form-submit1{
+  background-color: #1577a1;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 25px;
+}
 input[type=radio] {
 width: 40px;
 height: 35px;
@@ -147,4 +154,5 @@ position: absolute;
   .form-text{
     background:transparent !important;
     border-color: #000 !important; 
+    color: #646464 !important;
   }

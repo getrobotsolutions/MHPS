@@ -48,6 +48,10 @@ $(document).ready(function(){
       $('#dialog-overlay, #dialog-box').hide();   
       return false;
     });
+   $('.close').click(function () {   
+      $('#dialog-overlay1, #dialog-box1').hide();   
+      return false;
+    });
 
   $("#btn").click(function () {
     ShowPopup($("#btn").attr('dir'));
@@ -61,10 +65,17 @@ $(document).ready(function(){
     //$("$list1").show();
 
   });
+  //$("#form-submit").click(function () {
+    //ShowPopup();
 
-  $("#contactForm").submit(function( e ) {
+    //$("$list1").show();
 
-    if($("#name").val()== "")
+  //});
+  
+
+  $("#form-submit").click(function( e ) {
+
+    /*if($("#name").val()== "")
     {
       alert("Please enter your name.");
       $("#name").focus();
@@ -78,8 +89,82 @@ $(document).ready(function(){
     $("#name").val("");
     $("#name").focus();
     return false;
-    }
+    }*/
 
+    
+    /*if($("#company").val()=="")
+    {
+      alert("Please enter Company.");
+      $("#question").focus();
+      return false;
+    }
+    if($("#city").val()=="")
+    {
+      alert("Please enter city.");
+      $("#question").focus();
+      return false;
+    }*/
+
+    var radioValue = $('input:radio[name=demo]:checked').val();
+    //alert(radioValue);
+    if (radioValue==null) {
+      alert("Please Select an option.");
+      $("#demo").focus();
+      return false;
+    }
+    if (radioValue=='Other' &&  $("#other-text").val()=="") {
+      alert("Please specify others.");
+      $("#other-text").focus();
+      return false;
+    }
+    
+    var radioValue2 = $('input:radio[name=visit]:checked').val();
+    //alert(radioValue);
+    if (radioValue2==null) {
+      alert("Please Select an option1.");
+      $("#visit").focus();
+      return false;
+    }
+    if($("#mphs").val()=="")
+    {
+      alert("Please type your response.");
+      $("#mphs").focus();
+      return false;
+    }
+    ShowPopup();
+    /*if($("#email").val()== "")
+    {
+      alert("Please enter a valid email address.");
+      $("#email").focus();
+      return false;
+    }
+    
+    $email=$("#email").val();
+    
+    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    if( !emailReg.test( $email ) ) {
+      alert("Please enter a valid email address.");
+      $("#email").val("");
+      $("#email").focus();
+      return false;
+    }*/
+    /*if($("#properties").val()=="")
+    {
+      alert("Please enter properties.");
+      $("#question").focus();
+      return false;
+    }
+    $properties=$("#properties").val();
+    var nameReg = /^[0-9 ]+$/;
+    if( !nameReg.test( $properties ) ) {
+      alert("Please enter a number.");
+      $("#properties").val("");
+      $("#properties").focus();
+      return false;
+    }*/
+  
+    });
+  $("#form-submit1").click(function(){
     if($("#email").val()== "")
     {
       alert("Please enter a valid email address.");
@@ -96,46 +181,11 @@ $(document).ready(function(){
       $("#email").focus();
       return false;
     }
-    if($("#company").val()=="")
-    {
-      alert("Please enter Company.");
-      $("#question").focus();
-      return false;
-    }
-    if($("#city").val()=="")
-    {
-      alert("Please enter city.");
-      $("#question").focus();
-      return false;
-    }
+    //e.preventDefault();
 
-    var radioValue = $('input:radio[name=demo]:checked').val();
-    //alert(radioValue);
-    if (radioValue==null) {
-      alert("Please Select question.");
-      $("#demo").focus();
-      return false;
-    }
-    if($("#properties").val()=="")
-    {
-      alert("Please enter properties.");
-      $("#question").focus();
-      return false;
-    }
-    $properties=$("#properties").val();
-    var nameReg = /^[0-9 ]+$/;
-    if( !nameReg.test( $properties ) ) {
-      alert("Please enter a number.");
-      $("#properties").val("");
-      $("#properties").focus();
-      return false;
-    }
-  
-            e.preventDefault();
-
-            var $action = $(this).prop('action');
-            var $data = $(this).serialize();
-            var $this = $(this);
+            var $action = $('#contactForm').prop('action');
+            var $data = $('#contactForm').serialize();
+            var $this = $('#contactForm');
 
             $this.prevAll('.alert').remove();
 
@@ -147,6 +197,7 @@ $(document).ready(function(){
                 }
 
                 if( data.response=='success' ){
+                  $('#dialog-overlay1, #dialog-box1').hide();
                   $("#contactForm")[0].reset();
                   $('#form-success').show();
                   $( "#form-success" ).delay( 10000 ).fadeOut( 400 );
@@ -156,7 +207,9 @@ $(document).ready(function(){
             }, "json");
 
 
-});
+       
+
+  });
 
 });
 function hideSuccessMessage() {
@@ -170,25 +223,17 @@ function ShowPopup(src){
   var maskWidth = $(window).width();
   
   // calculate the values for center alignment
-var dialogTop =  '30%';//(maskHeight/3) - ($('#dialog-box').height());  
-var dialogLeft = (maskWidth/2) - ($('#dialog-box').width()/2); 
+  var dialogTop =  '30%';//(maskHeight/3) - ($('#dialog-box').height());  
+  var dialogLeft = (maskWidth/2) - ($('#dialog-box1').width()/2); 
   
   // assign values to the overlay and dialog box
-  $('#dialog-overlay').css({height:maskHeight, width:maskWidth}).show();
-  $('#dialog-box').css({top:dialogTop, left:dialogLeft}).show();
+  $('#dialog-overlay1').css({height:maskHeight, width:maskWidth}).show();
+  $('#dialog-box1').css({top:dialogTop, left:dialogLeft}).show();
   
-  if (src=="") {
-    document.getElementById('dialog-box').innerHTML = '<a href="#" class="button">Close</a><div class="dialog-content"><div id="dialog-message"><img width="800" src="images/offers/404.png"/></div></div>';
-  }
-  else{
-    if(readCookie("CurrentLanguage") === "English")
-      PlaySpeech("Please take a picture with your phone and show Merchant for your special offer.");
-    else if(readCookie("CurrentLanguage") === "Spanish")
-      PlaySpeech("Por favor, tome una foto con su teléfono y muestre al comerciante su oferta especial.");
-  
-  document.getElementById('dialog-box').innerHTML = '<p style="width:  70%;display:  block;float:  left;font-size: 29px;padding: 20px;">Take Picture and Show merchant</p><a href="#" class="button" style="float: left;position:  relative;top: 20px;">Close</a><div class="dialog-content"><div id="dialog-message"><img width="800" src="'+ src +'"/></div></div>';
+
+  //document.getElementById('dialog-box1').innerHTML = '<p style="width:  70%;display:  block;float:  left;font-size: 29px;padding: 20px;">Take Picture and Show merchant</p><a href="#" class="button" style="float: left;position:  relative;top: 20px;">Close</a><div class="dialog-content"><div id="dialog-message"><img width="800" src="'+ src +'"/></div></div>';
   //$("#dialog-box").append('<div class="dialog-content"><div id="dialog-message">'+ message +'</div><a href="#" class="button">Close</a></div>');
-    }
+  
 }
 
 function ShowPopupARS(src){
