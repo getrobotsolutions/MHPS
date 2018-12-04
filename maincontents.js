@@ -201,7 +201,7 @@ function OnJoystickControlled(strPara){
     if(btn_info[1] == '1'){
         window.external.ChangeLanguage("en-us");
         SetVolume(1);
-        window.external.PlaySpeech("Hello, welcome to MHPS.  Touch a button on my screen to begin.");   
+        window.external.PlaySpeech("Hello, come inside our booth and learn about the 5 changes of Power.");   
     }
     if(btn_info[2] == '1'){
         window.external.ChangeLanguage("en-us");
