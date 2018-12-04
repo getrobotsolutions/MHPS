@@ -2,7 +2,7 @@
 
 
         speak[0] = "Take a quick survey for a chance to win a $100 Amazon gift card";
-        speak[1] = "By completing this survey and signing up with GuestForce at this show you qualify for a lifetime 5% bonus on the RevShare Program!";
+        speak[1] = "Learn about the Smart M501GAC Enhanced Response. The Ideal partner for Intermittent Renewables.";
         speak[2] = "point Your smartphone at the Qr code and press your photo button to connect on LinkedIn";
         speak[3] = "Read a welcome message from our dean.";
         speak[4] = "Find out what classes you need for your major.";
@@ -30,7 +30,7 @@ function FC_ContentsCall(strContentsName, strLanguage)
             location.href = "Contents/Survey/index.html";
             break;
         case "SmartER":
-            //PlaySpeech(speak[1]);
+            PlaySpeech(speak[1]);
             location.href = "Contents/SmartER/index.html";
             break;
         case "Linkden":
@@ -195,7 +195,7 @@ function OnJoystickControlled(strPara){
     if(btn_info[0] == '1'){
             window.external.ChangeLanguage("en-us");
             SetVolume(1);
-            window.external.PlaySpeech("Hi! Come over and talk to me, check out this cool demo!");
+            window.external.PlaySpeech("Hello. Kon nichiwa, welcome to MHPS.  Touch a button on my screen to begin.");
     }
 
     if(btn_info[1] == '1'){
