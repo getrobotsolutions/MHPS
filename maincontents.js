@@ -7,7 +7,7 @@
         speak[3] = "Read a welcome message from our dean.";
         speak[4] = "Find out what classes you need for your major.";
         speak[5] = "";
-        speak[6] = "Say Cheese! ";
+        speak[6] = "It’s time to say cheese. Touch the camera icon to take a picture. ";
         speak[7] = "Smile! You are about to become a robot.";
         speak[8] = "Pick a song and let’s boogie!";
 
