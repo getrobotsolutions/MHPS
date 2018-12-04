@@ -3,7 +3,7 @@
 
         speak[0] = "Take a quick survey for a chance to win a $100 Amazon gift card";
         speak[1] = "By completing this survey and signing up with GuestForce at this show you qualify for a lifetime 5% bonus on the RevShare Program!";
-        speak[2] = "point Your smartphones at the Qr code and press your photo button to connect on LinkedIn";
+        speak[2] = "point Your smartphone at the Qr code and press your photo button to connect on LinkedIn";
         speak[3] = "Read a welcome message from our dean.";
         speak[4] = "Find out what classes you need for your major.";
         speak[5] = "";
@@ -201,7 +201,7 @@ function OnJoystickControlled(strPara){
     if(btn_info[1] == '1'){
         window.external.ChangeLanguage("en-us");
         SetVolume(1);
-        window.external.PlaySpeech("Hello, (Japanese ‘hello’) welcome to MHPS.  Touch a button on my screen to begin.");   
+        window.external.PlaySpeech("Hello, welcome to MHPS.  Touch a button on my screen to begin.");   
     }
     if(btn_info[2] == '1'){
         window.external.ChangeLanguage("en-us");
